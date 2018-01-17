@@ -1,0 +1,14 @@
+drop database gcd2;
+--update dbm cfg using dftdbpath /db2_datavol_db2inst1/;
+update db cfg using APPLHEAPSZ 2560;
+update db cfg using cur_commit ON;
+create database gcd2 using codeset UTF-8 territory en_US collate using UCA500R1_S1;
+connect to gcd2;
+create bufferpool BPGCD32K size 1000 pagesize 32K; 
+create large tablespace GCD_TS in nodegroup ibmdefaultgroup pagesize 32K managed by database using (file '/db2_datavol_db2inst1/db2inst1/NODE0000/GCD2/GCDDATA_TS1.c001' 150 M) extentsize 32 prefetchsize automatic bufferpool BPGCD32K autoresize yes increasesize  10 percent maxsize  500 M dropped table recovery ON;
+update db cfg using cur_commit ON;
+update db cfg using APPLHEAPSZ 2560;
+REVOKE USE OF TABLESPACE USERSPACE1 FROM PUBLIC;
+grant use of tablespace GCD_TS to PUBLIC;
+GRANT CREATETAB, CONNECT ON DATABASE TO USER gcd2;
+terminate;

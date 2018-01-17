@@ -1,0 +1,17 @@
+<server>
+	<ldapRegistry id="localAD" realm="defaultRealm"
+		host="192.168.1.215" 
+		baseDN="dc=samdom,dc=example,dc=com" 
+		port="389"
+		ldapType="Microsoft Active Directory" 
+		bindDN="CN=Administrator,CN=Users,dc=samdom,dc=example,dc=com" 
+		sslEnabled="false"
+		bindPassword="Password01">
+		<activedFilters
+			userFilter="(&amp;(sAMAccountName=%v)(objectclass=user))"
+			groupFilter="(&amp;(sAMAccountName=%v)(objectclass=group))" 
+			userIdMap="user:sAMAccountName" 
+			groupIdMap="*:cn">
+		</activedFilters>
+	</ldapRegistry>
+</server>

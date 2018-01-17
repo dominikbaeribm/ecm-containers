@@ -1,0 +1,11 @@
+<server>
+<dataSource id="FNGCDDS" jndiName="FNGCDDS" isolationLevel="TRANSACTION_READ_COMMITTED" type="javax.sql.DataSource">
+    <jdbcDriver libraryRef="MSJDBCLib"/>
+    <properties.microsoft.sqlserver databaseName="GCD" 
+                                    serverName="192.168.72.139" portNumber="1433" user="sa" password="filenet"/>
+</dataSource>
+
+<library id="MSJDBCLib">
+    <file name="/opt/ibm/wlp/usr/servers/defaultServer/configDropins/overrides/sqljdbc41.jar"/>
+</library>
+</server>

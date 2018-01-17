@@ -1,0 +1,29 @@
+<server>
+	<dataSource id="FNGCDDS" jndiName="FNGCDDS"    isolationLevel="TRANSACTION_READ_COMMITTED"  type="javax.sql.DataSource">
+		<jdbcDriver libraryRef="DB2JCC4Lib"/>
+		<properties.db2.jcc 
+			databaseName="GCD2" 
+			serverName="172.17.0.1" 
+			portNumber="50000"
+    		user="gcd2" 
+			password="Password01"
+			resultSetHoldability="HOLD_CURSORS_OVER_COMMIT"
+		/>
+		<connectionManager enableSharingForDirectLookups="false" />
+                <!-- connectionManager globalConnectionTypeOverride="unshared" /-->
+	</dataSource>
+
+	<dataSource id="FNGCDDSXA" jndiName="FNGCDDSXA"  isolationLevel="TRANSACTION_READ_COMMITTED"  type="javax.sql.XADataSource" supplementalJDBCTrace="true">
+		<properties.db2.jcc 
+			databaseName="OS1" 
+			serverName="172.17.0.1" 
+			portNumber="50000" 
+    		user="os1" 
+			password="Password01"
+		/>
+		<connectionManager enableSharingForDirectLookups="true" />
+                <!-- connectionManager globalConnectionTypeOverride="unshared" /-->
+		<jdbcDriver libraryRef="DB2JCC4Lib"/>
+
+	</dataSource>
+</server>
