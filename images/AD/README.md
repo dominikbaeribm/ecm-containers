@@ -2,9 +2,11 @@
 
 This docker container was copied from Ralph Sippl and the custom.sh was adapted.
 
-This repository is unmaintained. Check if one of the forks are up to date.
 
-Run these commands to build, start and stop the container
+
+Navigate to ecm-containers/images/AD/ecm-ad
+Update the custom.sh if you need additional users and groups.
+Then run following scripts:
 ```
 # build ecm-ad
 docker build . -t ecm-ad
