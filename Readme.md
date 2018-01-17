@@ -1,6 +1,7 @@
 # ecm-containers
 Auxiliary Repository for deploying ECM docker containers 
 
+
 Here you should find everything to create a complete working IBM Case Manager, IBM Content Manager infrastructure
 running directly from docker containers.
 There are 5 areas of interest:
@@ -12,9 +13,13 @@ There are 5 areas of interest:
 5) P8Toolkit: an additional docker image for running infrastructure related and deployment related activities against the CPE and ICN images  
 
 
-CSS, CMIS and ICM later  
+CSS, CMIS and ICM later   
+Status:  
+Status: 1) completed  
+Status: 2) failed with mssql due to MSDTC not available on unix. trying DB2 and oracle  
 
-It should be possible to clone this repository into an Ubuntu host or vmware and to be running ICN within 1h.
+It should be possible to clone this repository into an Ubuntu host or Ubuntu on vmware   
+and to be running ICN within 1h.
 
 
 Variables: 
