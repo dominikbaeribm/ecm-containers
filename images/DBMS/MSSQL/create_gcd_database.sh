@@ -1,0 +1,2 @@
+sudo docker cp create_database.sql sql2:/tmp
+sudo docker exec -it sql2 /bin/bash -c "export DBName=GCD && export DBUser=gcd && export DBPassword=Password01 && /opt/mssql-tools/bin/sqlcmd -S localhost -U SA -P 'Password01' -i '/tmp/create_userlogins.sql'"

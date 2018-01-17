@@ -1,0 +1,2 @@
+sudo docker cp test.sql sql2:/tmp
+sudo docker exec -it sql2 /bin/bash -c "export DBName=master && export DataPath=/var/opt/mssql/data && /opt/mssql-tools/bin/sqlcmd -S localhost -U SA -P 'Password01' -i '/tmp/test.sql'"
