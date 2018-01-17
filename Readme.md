@@ -10,6 +10,8 @@ There are 5 areas of interest:
 3) CPE:	 all auxiliary scripts to produce the configuration artefacts for the official IBM Content Platform image  
 4) ICND: all auxiliary scripts to produce the configuration artefacts for the official IBM Navigator image  
 5) P8Toolkit: an additional docker image for running infrastructure related and deployment related activities against the CPE and ICN images  
+
+
 CSS, CMIS and ICM later  
 
 It should be possible to clone this repository into an Ubuntu host or vmware and to be running ICN within 1h.
