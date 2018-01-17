@@ -45,14 +45,10 @@ LDAP search within the container:
 ldapsearch -b "DC=samdom,DC=example,DC=com" "(&(objectClass=user)(name=administrator))"
 ```
 
-
-```
-
 LDAP search outside the container: search user administrator with bind user ldap_user:
 ```
 ldapsearch -h 192.168.1.215 -p 389 -b "DC=samdom,DC=example,DC=com" "(&(objectClass=user)(name=administrator))" -D "CN=ldap_user,CN=Users,DC=samdom,DC=example,DC=com" -W
 ```
-
 
 Edit [custom.sh](custom.sh) to add custom logic executed at the and of supervisord. 
 
