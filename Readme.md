@@ -6,7 +6,7 @@ Here you should find everything to create a complete working IBM Case Manager, I
 running directly from docker containers.
 There are 5 areas of interest:
 
-1) LDAP: an image containing an AD with preconfigured users and groups  
+1) LDAP: an image containing an AD with preconfigured users and groups  [AD](https://github.com/dominikbaeribm/ecm-containers/blob/master/images/AD/README.md "ECM-AD")  
 2) DBMS: an image containing all databases with preconfigured users, logins, tablespaces etc.  
 3) CPE:	 all auxiliary scripts to produce the configuration artefacts for the official IBM Content Platform image  
 4) ICND: all auxiliary scripts to produce the configuration artefacts for the official IBM Navigator image  
