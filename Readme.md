@@ -15,11 +15,15 @@ There are 5 areas of interest:
 
 CSS, CMIS and ICM later   
 Status:  
-Status: 1) completed  
-Status: 2) failed with mssql due to MSDTC not available on unix. trying DB2 and oracle 
-		   DB2 in a container currently only with the db2inst1 user, but with persistent datalayer available.  
-		   https://github.com/dominikbaeribm/ecm-containers/tree/master/images/DBMS/DB2 
+Status: LDAP 1) completed  
+Status: DBMS 2) MSSQL:  
+					failed with mssql due to MSDTC not available on unix. trying DB2 and oracle 
+		   		DB2 in a container currently only with the db2inst1 user, but with persistent datalayer available.  
+		   		https://github.com/dominikbaeribm/ecm-containers/tree/master/images/DBMS/DB2 
+		   		p8users implemented.
+		   		Database creation scripts to be provided soon.
 
+Goal:
 It should be possible to clone this repository into an Ubuntu host or Ubuntu on vmware   
 and to be running ICN within 1h.
 
