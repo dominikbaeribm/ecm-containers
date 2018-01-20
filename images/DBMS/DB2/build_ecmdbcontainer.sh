@@ -1,0 +1,1 @@
+docker build . -t ecmdb2express
