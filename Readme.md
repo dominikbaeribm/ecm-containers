@@ -25,7 +25,7 @@ Status: DBMS 2) MSSQL:
 
 Goal:
 It should be possible to clone this repository into an Ubuntu host or Ubuntu on vmware   
-and to be running ICN within 1h.
+and to be running ICN within 1h.  
 
 
 Variables: 
