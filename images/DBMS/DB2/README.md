@@ -14,4 +14,7 @@ then run the container script
 ```
 /run_dockercontainer_db2.sh  
 ```  
-this will create a persistent volume and instantiate a docker container of the ibmcom/db2express-c image.
+this will create a persistent volume and instantiate a docker container of the customized 
+ibmcom/db2express-c image (ecmdb2express)  
+Next step to create the various databases. (coming soon)  
+
