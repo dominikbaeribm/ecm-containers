@@ -5,5 +5,13 @@ First pull the official db2 express docker container
 ```
 docker pull docker pull ibmcom/db2express-c
 ```
-Then run the container script in ecm-containers/images/DBMS/DB2/run_dockercontainer_db2.sh  
+Then change to ecm-containers/images/DBMS/DB2
+run     
+```
+./build_ecmdbcontainer.sh  
+```
+then run the container script 
+```
+/run_dockercontainer_db2.sh  
+```  
 this will create a persistent volume and instantiate a docker container of the ibmcom/db2express-c image.
