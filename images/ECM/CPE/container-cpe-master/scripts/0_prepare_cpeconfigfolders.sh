@@ -35,13 +35,13 @@ sudo mkdir -p $CPEConfig/FileNet
 sudo mkdir -p $CPEConfig/icmrules 
 sudo mkdir -p $CPEConfig/bootstrap
 sudo mkdir -p $CPEConfig/tmp
-sudo cp $ExamplesDir/BootstrapConfig.jar $CPEConfig/tmp/BootstrapConfig.jar
-sudo cp $ExamplesDir/BootstrapConfig.jar $CPEConfig/tmp/BootstrapConfigProps.jar
-sudo cd $CPEConfig/tmp
+cp $ExamplesDir/BootstrapConfig.jar $CPEConfig/tmp/BootstrapConfig.jar
+cp $ExamplesDir/BootstrapConfig.jar $CPEConfig/tmp/BootstrapConfigProps.jar
+cd $CPEConfig/tmp
 sudo java -Dfile.encoding=utf-8 -jar BootstrapConfig.jar -s FNGCDDS -x FNGCDDSXA -u p8admin -p Password01 -e BootstrapConfigProps.jar -b 256 -c AES -k -o true
 sudo jar xvf BootstrapConfigProps.jar APP-INF/lib/props.jar
-sudo cp APP-INF/lib/props.jar $CPEConfig/bootstrap/
+cp APP-INF/lib/props.jar $CPEConfig/bootstrap/
 #copy db2_ad specific files
-sudo cp $ExamplesDir/db2_ad/{ldapAD.xml,DB2JCCDriver.xml,FNGCDDS.xml,OS1DS.xml} $CPEConfig/configDropins/overrides/
-sudo cp $ExamplesDir/{db2jcc4.jar,db2jcc_license_cu.jar} $CPEConfig/configDropins/overrides/
+cp $ExamplesDir/db2_ad/{ldapAD.xml,DB2JCCDriver.xml,FNGCDDS.xml,OS1DS.xml} $CPEConfig/configDropins/overrides/
+cp $ExamplesDir/{db2jcc4.jar,db2jcc_license_cu.jar} $CPEConfig/configDropins/overrides/
 sudo chown -R 501:500 $CPEConfig/

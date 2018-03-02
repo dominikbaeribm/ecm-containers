@@ -33,10 +33,10 @@ sudo docker run -d --name ${Label}_cpe1 \
 --link=ecmad \
 -v /home/ecm_ad_db2/${Label}/asa:/opt/ibm/asa \
 -v /tmp/data/textext:/opt/ibm/textext \
--v /home/ecm_ad_db2/${Label}_cpe1/icmrules:/opt/ibm/icmrules \
--v /home/ecm_ad_db2/${Label}_cpe1/logs:/opt/ibm/wlp/usr/servers/defaultServer/logs \
--v /home/ecm_ad_db2/${Label}_cpe1/FileNet:/opt/ibm/wlp/usr/servers/defaultServer/FileNet \
--v /home/ecm_ad_db2/${Label}_cpe1/configDropins/overrides:/opt/ibm/wlp/usr/servers/defaultServer/configDropins/overrides \
--v /home/ecm_ad_db2/${Label}_cpe1/bootstrap:/opt/ibm/wlp/usr/servers/defaultServer/lib/bootstrap \
+-v /home/ecm_ad_db2/${Label}/icmrules:/opt/ibm/icmrules \
+-v /home/ecm_ad_db2/${Label}/logs:/opt/ibm/wlp/usr/servers/defaultServer/logs \
+-v /home/ecm_ad_db2/${Label}/FileNet:/opt/ibm/wlp/usr/servers/defaultServer/FileNet \
+-v /home/ecm_ad_db2/${Label}/configDropins/overrides:/opt/ibm/wlp/usr/servers/defaultServer/configDropins/overrides \
+-v /home/ecm_ad_db2/${Label}/bootstrap:/opt/ibm/wlp/usr/servers/defaultServer/lib/bootstrap \
 ibmcorp/filenet_content_platform_engine:latest
 
