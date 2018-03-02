@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 # docker pull ibmcom/db2express-c
-docker login dominikbaeribm
-docker pull ibmcorp/ecm_earlyadopters_cpe:earlyadopters-gm5.5
-docker pull ibmcorp/ecm_earlyadopters_icn:earlyadopters-gm5.5
+docker login 
+docker pull ibmcorp/filenet_content_platform_engine:latest
+docker pull ibmcorp/content_navigator:latest
+docker pull ibmcorp/content_management_interoperability_services:latest
+docker pull ibmcorp/content_search_services:latest
