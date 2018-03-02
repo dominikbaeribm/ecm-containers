@@ -1,4 +1,4 @@
-docker run -d --name cpe2 \
+sudo docker run -d --name cpe2 \
   -p 4082:9080 -p 4442:9443 \
 --hostname=cpe2 \
 --link=ecmdb \
@@ -10,5 +10,5 @@ docker run -d --name cpe2 \
 -v /home/ecm_ad_db2/cpe_data/FileNet:/opt/ibm/wlp/usr/servers/defaultServer/FileNet \
 -v /home/ecm_ad_db2/cpe_data/configDropins/overrides:/opt/ibm/wlp/usr/servers/defaultServer/configDropins/overrides \
 -v /home/ecm_ad_db2/cpe_data/bootstrap:/opt/ibm/wlp/usr/servers/defaultServer/lib/bootstrap \
-ibmcorp/ecm_earlyadopters_cpe:earlyadopters-gm5.5
+ibmcorp/filenet_content_platform_engine:latest
 

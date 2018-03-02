@@ -26,7 +26,7 @@ done
 Label=${Stage}_${Application}
 echo $Label
 
-docker run -d --name ${Label}_cpe1 \
+sudo docker run -d --name ${Label}_cpe1 \
   -p 4081:9080 -p 4443:9443 \
 --hostname=${Label}_cpe1 \
 --link=ecmdb \
@@ -38,5 +38,5 @@ docker run -d --name ${Label}_cpe1 \
 -v /home/ecm_ad_db2/${Label}_cpe1/FileNet:/opt/ibm/wlp/usr/servers/defaultServer/FileNet \
 -v /home/ecm_ad_db2/${Label}_cpe1/configDropins/overrides:/opt/ibm/wlp/usr/servers/defaultServer/configDropins/overrides \
 -v /home/ecm_ad_db2/${Label}_cpe1/bootstrap:/opt/ibm/wlp/usr/servers/defaultServer/lib/bootstrap \
-ibmcorp/ecm_earlyadopters_cpe:earlyadopters-gm5.5
+ibmcorp/filenet_content_platform_engine:latest
 
