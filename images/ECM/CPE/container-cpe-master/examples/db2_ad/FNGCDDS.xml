@@ -5,7 +5,7 @@
 			databaseName="GCD" 
 			serverName="ecmdb" 
 			portNumber="50000"
-    		user="gcd2" 
+    		user="gcd" 
 			password="Password01"
 			resultSetHoldability="HOLD_CURSORS_OVER_COMMIT"
 		/>

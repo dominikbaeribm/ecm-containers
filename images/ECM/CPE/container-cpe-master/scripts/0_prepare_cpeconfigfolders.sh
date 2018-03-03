@@ -36,7 +36,7 @@ sudo mkdir -p $CPEConfig/icmrules
 sudo mkdir -p $CPEConfig/bootstrap
 sudo mkdir -p $CPEConfig/tmp
 cp $ExamplesDir/BootstrapConfig.jar $CPEConfig/tmp/BootstrapConfig.jar
-cp $ExamplesDir/BootstrapConfig.jar $CPEConfig/tmp/BootstrapConfigProps.jar
+cp $ExamplesDir/BootstrapConfigProps.jar $CPEConfig/tmp/BootstrapConfigProps.jar
 cd $CPEConfig/tmp
 sudo java -Dfile.encoding=utf-8 -jar BootstrapConfig.jar -s FNGCDDS -x FNGCDDSXA -u p8admin -p Password01 -e BootstrapConfigProps.jar -b 256 -c AES -k -o true
 sudo jar xvf BootstrapConfigProps.jar APP-INF/lib/props.jar
