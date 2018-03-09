@@ -78,8 +78,8 @@ echo Grant user $DB2USER access to tablespace
 
 db2 -v GRANT CREATETAB,CONNECT ON DATABASE  TO user $DB2USER;
 db2 -v GRANT USE OF TABLESPACE $TBLSPC TO user $DB2USER;
---db2 GRANT USE OF TABLESPACE TEMPSPACE1 TO user $DB2USER;
-echo "Created database $P8DBNAME *********************************************************************"
+#-- db2 GRANT USE OF TABLESPACE TEMPSPACE1 TO user $DB2USER;
+echo "Created database $P8DBNAME ********************************************************************"
 
 #-- Close connection
 db2 CONNECT RESET
