@@ -3,11 +3,11 @@
 function print-help()
 {
         echo "Argument error, command usage: "
-        echo " -n database name"
-        echo " -s schema name"
-        echo " -t tablespace name"
-        echo " -u db2 user"
-        echo " -a navigator admin id"
+        echo " -n database name - ICN"
+        echo " -s schema name - icn"
+        echo " -t tablespace name - ICN_TS"
+        echo " -u db2 user - icn"
+        echo " -a navigator admin id - p8admin"
         exit 1
 }
 
@@ -33,13 +33,14 @@ do
         esac
 done
 
-ICNDBDIR=/home/${DB2_USER}/${DB_NAME}
+ICNDBDIR=/home/db2inst1/db2inst1/NODE0000/${DB_NAME}
 
 mkdir -p ${ICNDBDIR}
-
-sed -i -e "s/@ECMClient_DBNAME@/$DB_NAME/g" DB2_CREATE_SCRIPT.sql
-sed -i -e "s/@ECMClient_DBUSER@/$DB2_USER/g" DB2_CREATE_SCRIPT.sql
-sed -i -e "s/@ECMClient_DBUSER@/$DB2_USER/g" DB2_ONE_SCRIPT_ICNDB.sql
-sed -i -e "s/@ECMClient_SCHEMA@/$SCHEMA_NAME/g" DB2_ONE_SCRIPT_ICNDB.sql
-sed -i -e "s/@ECMClient_TBLSPACE@/$TS_NAME/g" DB2_ONE_SCRIPT_ICNDB.sql
-sed -i -e "s/@ECMClient_ADMINID@/$ICN_ADMIN_ID/g" DB2_ONE_SCRIPT_ICNDB.sql
+cp DB2_CREATE_SCRIPT.sql create_icn.sql
+cp DB2_ONE_SCRIPT_ICNDB ddl_icn.sql
+sed -i -e "s/@ICNDBDIR@/$DB_NAME/g" create_icn.sql
+sed -i -e "s/@ICNDBDIR@/$ICNDBDIR/g" create_icn.sql
+sed -i -e "s/@ECMClient_DBUSER@/$DB2_USER/g" ddl_icn.sql
+sed -i -e "s/@ECMClient_SCHEMA@/$SCHEMA_NAME/g" ddl_icn.sql
+sed -i -e "s/@ECMClient_TBLSPACE@/$TS_NAME/g" ddl_icn.sql
+sed -i -e "s/@ECMClient_ADMINID@/$ICN_ADMIN_ID/g" ddl_icn.sql
