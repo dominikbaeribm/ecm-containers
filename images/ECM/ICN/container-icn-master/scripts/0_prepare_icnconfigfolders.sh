@@ -14,6 +14,7 @@ chown -R 501:500 /home/ecm_ad_db2/icn/configDropins/overrides
 
 cd /home/ecm_ad_db2/icn
 
+
 cp /mnt/hgfs/ecm-containers/images/ECM/ICN/container-icn-master/examples/ICNDS.xml .
 cp /mnt/hgfs/ecm-containers/images/ECM/CPE/container-cpe-master/examples/ldapAD.xml .
 cp /mnt/hgfs/ecm-containers/images/ECM/CPE/container-cpe-master/examples/DB2JCCDriver.xml .
