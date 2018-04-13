@@ -34,11 +34,12 @@ do
 done
 
 ICNDBDIR=/home/db2inst1/db2inst1/NODE0000/${DB_NAME}
-
 mkdir -p ${ICNDBDIR}
+echo "created DB directory: ${ICNDBDIR}
 cp DB2_CREATE_SCRIPT.sql create_icn.sql
-cp DB2_ONE_SCRIPT_ICNDB ddl_icn.sql
-sed -i -e "s/@ICNDBDIR@/$DB_NAME/g" create_icn.sql
+cp DB2_ONE_SCRIPT_ICNDB.sql ddl_icn.sql
+echo "copied DB2_CREATE_SCRIPT.sql and DB2_ONE_SCRIPT_ICNDB.sql"
+sed -i -e "s/@DB_NAM@/$DB_NAME/g" create_icn.sql
 sed -i -e "s/@ICNDBDIR@/$ICNDBDIR/g" create_icn.sql
 sed -i -e "s/@ECMClient_DBUSER@/$DB2_USER/g" ddl_icn.sql
 sed -i -e "s/@ECMClient_SCHEMA@/$SCHEMA_NAME/g" ddl_icn.sql
