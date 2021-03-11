@@ -1,5 +1,8 @@
 # ecm-containers
-Auxiliary Repository for deploying ECM docker containers 
+Auxiliary Repository for deploying ECM docker containers
+
+Remark: 2021-03-05 The docker images for cloud pak for business automation and db2 have changed.
+A lot of the idea might still work but this github repository would need a major update.
 
 
 Here you should find everything to create a complete working IBM Case Manager, IBM Content Manager infrastructure
